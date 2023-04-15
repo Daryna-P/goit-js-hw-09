@@ -35,10 +35,11 @@ function runPromise(delay, step, amount) {
   }
 }
 
-function onResolve (position, delay) {
+function onResolve ({position, delay}) {
   Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  console.log(position);
 };
 
-function onReject (position, delay) {
+function onReject ({position, delay}) {
   Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
 };
